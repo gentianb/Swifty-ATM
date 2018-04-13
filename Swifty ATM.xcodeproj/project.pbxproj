@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB544BD264053FFEA6B8D411 /* Pods_Swifty_ATMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C88B674C707B493E9ED3AE3 /* Pods_Swifty_ATMTests.framework */; };
+		F80B21FE207C246E00B64FC2 /* AdminUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80B21FD207C246E00B64FC2 /* AdminUser.swift */; };
+		F80B2200207D10E300B64FC2 /* CreateAdminUsersPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80B21FF207D10E300B64FC2 /* CreateAdminUsersPopUpViewController.swift */; };
+		F80B2202207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80B2201207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift */; };
+		F813AD572079168300B512B8 /* SearchUsersOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813AD562079168300B512B8 /* SearchUsersOptionCell.swift */; };
+		F813AD5B20793B7A00B512B8 /* CreateStandardUsersPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813AD5A20793B7A00B512B8 /* CreateStandardUsersPopUpViewController.swift */; };
+		F813AD5D207987C100B512B8 /* InsertUsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813AD5C207987C100B512B8 /* InsertUsersCell.swift */; };
+		F813AD5F20798C1E00B512B8 /* AddUsersTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813AD5E20798C1E00B512B8 /* AddUsersTextField.swift */; };
+		F813AD6120799F6300B512B8 /* EditStandardUserPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813AD6020799F6300B512B8 /* EditStandardUserPopUpViewController.swift */; };
+		F82FD646206ADF8000F9753B /* GeneralOptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82FD645206ADF8000F9753B /* GeneralOptionsCell.swift */; };
+		F839B61B20607006008E5613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B61A20607006008E5613 /* AppDelegate.swift */; };
+		F839B61D20607006008E5613 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B61C20607006008E5613 /* MainViewController.swift */; };
+		F839B62020607006008E5613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F839B61E20607006008E5613 /* Main.storyboard */; };
+		F839B62220607006008E5613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F839B62120607006008E5613 /* Assets.xcassets */; };
+		F839B62520607006008E5613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F839B62320607006008E5613 /* LaunchScreen.storyboard */; };
+		F839B63020607006008E5613 /* Swifty_ATMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B62F20607006008E5613 /* Swifty_ATMTests.swift */; };
+		F839B63B206071BA008E5613 /* StandardUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B63A206071BA008E5613 /* StandardUserViewController.swift */; };
+		F839B63D206071CA008E5613 /* AdminLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B63C206071CA008E5613 /* AdminLogInViewController.swift */; };
+		F839B6442061ADBC008E5613 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F839B6432061ADBC008E5613 /* GoogleService-Info.plist */; };
+		F839B6462061B497008E5613 /* StandardUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B6452061B497008E5613 /* StandardUser.swift */; };
+		F839B6482061B9AF008E5613 /* AdminOptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B6472061B9AF008E5613 /* AdminOptionsCell.swift */; };
+		F839B64C20646347008E5613 /* AdminOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B64B20646347008E5613 /* AdminOptions.swift */; };
+		F839B64E206463BB008E5613 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B64D206463BB008E5613 /* DataSource.swift */; };
+		F839B65020646B70008E5613 /* AdminOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B64F20646B70008E5613 /* AdminOptionsViewController.swift */; };
+		F839B65220646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65120646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift */; };
+		F839B65420646CB4008E5613 /* AdminOptionSearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65320646CB4008E5613 /* AdminOptionSearchUsersViewController.swift */; };
+		F839B65620646CC9008E5613 /* AdminOptionInsertUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65520646CC9008E5613 /* AdminOptionInsertUsersViewController.swift */; };
+		FDBABC9A31B0B045D9C10D17 /* Pods_Swifty_ATM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187C4F8CDF0D0309819FF91 /* Pods_Swifty_ATM.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F839B62C20607006008E5613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F839B60F20607006008E5613 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F839B61620607006008E5613;
+			remoteInfo = "Swifty ATM";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BE9913E7B681B10F04E4638 /* Pods-Swifty ATM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty ATM.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty ATM/Pods-Swifty ATM.release.xcconfig"; sourceTree = "<group>"; };
+		7C88B674C707B493E9ED3AE3 /* Pods_Swifty_ATMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swifty_ATMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9187C4F8CDF0D0309819FF91 /* Pods_Swifty_ATM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swifty_ATM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76BF15710549AC4B2237707 /* Pods-Swifty ATMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty ATMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty ATMTests/Pods-Swifty ATMTests.release.xcconfig"; sourceTree = "<group>"; };
+		C92F05B65F175618984041DC /* Pods-Swifty ATMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty ATMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty ATMTests/Pods-Swifty ATMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D57C9811A847912474638ED5 /* Pods-Swifty ATM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swifty ATM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swifty ATM/Pods-Swifty ATM.debug.xcconfig"; sourceTree = "<group>"; };
+		F80B21FD207C246E00B64FC2 /* AdminUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUser.swift; sourceTree = "<group>"; };
+		F80B21FF207D10E300B64FC2 /* CreateAdminUsersPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAdminUsersPopUpViewController.swift; sourceTree = "<group>"; };
+		F80B2201207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAdminUserPopUpViewController.swift; sourceTree = "<group>"; };
+		F813AD562079168300B512B8 /* SearchUsersOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersOptionCell.swift; sourceTree = "<group>"; };
+		F813AD5A20793B7A00B512B8 /* CreateStandardUsersPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStandardUsersPopUpViewController.swift; sourceTree = "<group>"; };
+		F813AD5C207987C100B512B8 /* InsertUsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertUsersCell.swift; sourceTree = "<group>"; };
+		F813AD5E20798C1E00B512B8 /* AddUsersTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsersTextField.swift; sourceTree = "<group>"; };
+		F813AD6020799F6300B512B8 /* EditStandardUserPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStandardUserPopUpViewController.swift; sourceTree = "<group>"; };
+		F82FD645206ADF8000F9753B /* GeneralOptionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralOptionsCell.swift; sourceTree = "<group>"; };
+		F839B61720607006008E5613 /* Swifty ATM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty ATM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F839B61A20607006008E5613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F839B61C20607006008E5613 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F839B61F20607006008E5613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F839B62120607006008E5613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F839B62420607006008E5613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F839B62620607006008E5613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F839B62B20607006008E5613 /* Swifty ATMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swifty ATMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F839B62F20607006008E5613 /* Swifty_ATMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swifty_ATMTests.swift; sourceTree = "<group>"; };
+		F839B63120607006008E5613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F839B63A206071BA008E5613 /* StandardUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUserViewController.swift; sourceTree = "<group>"; };
+		F839B63C206071CA008E5613 /* AdminLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLogInViewController.swift; sourceTree = "<group>"; };
+		F839B6432061ADBC008E5613 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F839B6452061B497008E5613 /* StandardUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUser.swift; sourceTree = "<group>"; };
+		F839B6472061B9AF008E5613 /* AdminOptionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionsCell.swift; sourceTree = "<group>"; };
+		F839B64B20646347008E5613 /* AdminOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptions.swift; sourceTree = "<group>"; };
+		F839B64D206463BB008E5613 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		F839B64F20646B70008E5613 /* AdminOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionsViewController.swift; sourceTree = "<group>"; };
+		F839B65120646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionGeneralBalanceViewController.swift; sourceTree = "<group>"; };
+		F839B65320646CB4008E5613 /* AdminOptionSearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionSearchUsersViewController.swift; sourceTree = "<group>"; };
+		F839B65520646CC9008E5613 /* AdminOptionInsertUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionInsertUsersViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F839B61420607006008E5613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBABC9A31B0B045D9C10D17 /* Pods_Swifty_ATM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F839B62820607006008E5613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB544BD264053FFEA6B8D411 /* Pods_Swifty_ATMTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23A2FC03302AA4E10FDF1843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9187C4F8CDF0D0309819FF91 /* Pods_Swifty_ATM.framework */,
+				7C88B674C707B493E9ED3AE3 /* Pods_Swifty_ATMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65A47E7F0BE896FEDAA15CA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D57C9811A847912474638ED5 /* Pods-Swifty ATM.debug.xcconfig */,
+				3BE9913E7B681B10F04E4638 /* Pods-Swifty ATM.release.xcconfig */,
+				C92F05B65F175618984041DC /* Pods-Swifty ATMTests.debug.xcconfig */,
+				B76BF15710549AC4B2237707 /* Pods-Swifty ATMTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F80B21FC207C0D1F00B64FC2 /* AdminViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F839B63C206071CA008E5613 /* AdminLogInViewController.swift */,
+				F839B64F20646B70008E5613 /* AdminOptionsViewController.swift */,
+				F839B65120646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift */,
+				F839B65320646CB4008E5613 /* AdminOptionSearchUsersViewController.swift */,
+				F839B65520646CC9008E5613 /* AdminOptionInsertUsersViewController.swift */,
+				F813AD5A20793B7A00B512B8 /* CreateStandardUsersPopUpViewController.swift */,
+				F813AD6020799F6300B512B8 /* EditStandardUserPopUpViewController.swift */,
+				F80B21FF207D10E300B64FC2 /* CreateAdminUsersPopUpViewController.swift */,
+				F80B2201207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift */,
+			);
+			path = AdminViewControllers;
+			sourceTree = "<group>";
+		};
+		F839B60E20607006008E5613 = {
+			isa = PBXGroup;
+			children = (
+				F839B61920607006008E5613 /* Swifty ATM */,
+				F839B62E20607006008E5613 /* Swifty ATMTests */,
+				F839B61820607006008E5613 /* Products */,
+				65A47E7F0BE896FEDAA15CA5 /* Pods */,
+				23A2FC03302AA4E10FDF1843 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F839B61820607006008E5613 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F839B61720607006008E5613 /* Swifty ATM.app */,
+				F839B62B20607006008E5613 /* Swifty ATMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F839B61920607006008E5613 /* Swifty ATM */ = {
+			isa = PBXGroup;
+			children = (
+				F839B61A20607006008E5613 /* AppDelegate.swift */,
+				F839B63E20607DBE008E5613 /* Model */,
+				F839B63F20607DC7008E5613 /* View */,
+				F839B64020607DCB008E5613 /* Controller */,
+				F839B61E20607006008E5613 /* Main.storyboard */,
+				F839B62120607006008E5613 /* Assets.xcassets */,
+				F839B62320607006008E5613 /* LaunchScreen.storyboard */,
+				F839B6432061ADBC008E5613 /* GoogleService-Info.plist */,
+				F839B62620607006008E5613 /* Info.plist */,
+			);
+			path = "Swifty ATM";
+			sourceTree = "<group>";
+		};
+		F839B62E20607006008E5613 /* Swifty ATMTests */ = {
+			isa = PBXGroup;
+			children = (
+				F839B62F20607006008E5613 /* Swifty_ATMTests.swift */,
+				F839B63120607006008E5613 /* Info.plist */,
+			);
+			path = "Swifty ATMTests";
+			sourceTree = "<group>";
+		};
+		F839B63E20607DBE008E5613 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F839B64D206463BB008E5613 /* DataSource.swift */,
+				F839B6452061B497008E5613 /* StandardUser.swift */,
+				F80B21FD207C246E00B64FC2 /* AdminUser.swift */,
+				F839B64B20646347008E5613 /* AdminOptions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F839B63F20607DC7008E5613 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F839B6472061B9AF008E5613 /* AdminOptionsCell.swift */,
+				F813AD562079168300B512B8 /* SearchUsersOptionCell.swift */,
+				F82FD645206ADF8000F9753B /* GeneralOptionsCell.swift */,
+				F813AD5C207987C100B512B8 /* InsertUsersCell.swift */,
+				F813AD5E20798C1E00B512B8 /* AddUsersTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F839B64020607DCB008E5613 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F839B61C20607006008E5613 /* MainViewController.swift */,
+				F839B63A206071BA008E5613 /* StandardUserViewController.swift */,
+				F80B21FC207C0D1F00B64FC2 /* AdminViewControllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F839B61620607006008E5613 /* Swifty ATM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F839B63420607006008E5613 /* Build configuration list for PBXNativeTarget "Swifty ATM" */;
+			buildPhases = (
+				F7C5D040CC961941A81273BE /* [CP] Check Pods Manifest.lock */,
+				F839B61320607006008E5613 /* Sources */,
+				F839B61420607006008E5613 /* Frameworks */,
+				F839B61520607006008E5613 /* Resources */,
+				FF2372CFACFB7BFFC6FD926F /* [CP] Embed Pods Frameworks */,
+				2F168AFF48480B10829838AF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swifty ATM";
+			productName = "Swifty ATM";
+			productReference = F839B61720607006008E5613 /* Swifty ATM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F839B62A20607006008E5613 /* Swifty ATMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F839B63720607006008E5613 /* Build configuration list for PBXNativeTarget "Swifty ATMTests" */;
+			buildPhases = (
+				10B82D4DCFB93C245051D463 /* [CP] Check Pods Manifest.lock */,
+				F839B62720607006008E5613 /* Sources */,
+				F839B62820607006008E5613 /* Frameworks */,
+				F839B62920607006008E5613 /* Resources */,
+				AC9AFC3CE2C2319A7577E384 /* [CP] Embed Pods Frameworks */,
+				53D8368B04C86CB01FF8E086 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F839B62D20607006008E5613 /* PBXTargetDependency */,
+			);
+			name = "Swifty ATMTests";
+			productName = "Swifty ATMTests";
+			productReference = F839B62B20607006008E5613 /* Swifty ATMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F839B60F20607006008E5613 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Gentian Barileva";
+				TargetAttributes = {
+					F839B61620607006008E5613 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F839B62A20607006008E5613 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F839B61620607006008E5613;
+					};
+				};
+			};
+			buildConfigurationList = F839B61220607006008E5613 /* Build configuration list for PBXProject "Swifty ATM" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F839B60E20607006008E5613;
+			productRefGroup = F839B61820607006008E5613 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F839B61620607006008E5613 /* Swifty ATM */,
+				F839B62A20607006008E5613 /* Swifty ATMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F839B61520607006008E5613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F839B62520607006008E5613 /* LaunchScreen.storyboard in Resources */,
+				F839B6442061ADBC008E5613 /* GoogleService-Info.plist in Resources */,
+				F839B62220607006008E5613 /* Assets.xcassets in Resources */,
+				F839B62020607006008E5613 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F839B62920607006008E5613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10B82D4DCFB93C245051D463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swifty ATMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F168AFF48480B10829838AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swifty ATM/Pods-Swifty ATM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53D8368B04C86CB01FF8E086 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swifty ATMTests/Pods-Swifty ATMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC9AFC3CE2C2319A7577E384 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swifty ATMTests/Pods-Swifty ATMTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C5D040CC961941A81273BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swifty ATM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2372CFACFB7BFFC6FD926F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Swifty ATM/Pods-Swifty ATM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextField+Shake/UITextField_Shake.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextField_Shake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swifty ATM/Pods-Swifty ATM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F839B61320607006008E5613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80B21FE207C246E00B64FC2 /* AdminUser.swift in Sources */,
+				F839B63B206071BA008E5613 /* StandardUserViewController.swift in Sources */,
+				F839B6462061B497008E5613 /* StandardUser.swift in Sources */,
+				F80B2202207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift in Sources */,
+				F839B65420646CB4008E5613 /* AdminOptionSearchUsersViewController.swift in Sources */,
+				F839B64C20646347008E5613 /* AdminOptions.swift in Sources */,
+				F839B64E206463BB008E5613 /* DataSource.swift in Sources */,
+				F839B61D20607006008E5613 /* MainViewController.swift in Sources */,
+				F839B61B20607006008E5613 /* AppDelegate.swift in Sources */,
+				F80B2200207D10E300B64FC2 /* CreateAdminUsersPopUpViewController.swift in Sources */,
+				F813AD6120799F6300B512B8 /* EditStandardUserPopUpViewController.swift in Sources */,
+				F813AD5D207987C100B512B8 /* InsertUsersCell.swift in Sources */,
+				F813AD5B20793B7A00B512B8 /* CreateStandardUsersPopUpViewController.swift in Sources */,
+				F839B63D206071CA008E5613 /* AdminLogInViewController.swift in Sources */,
+				F813AD5F20798C1E00B512B8 /* AddUsersTextField.swift in Sources */,
+				F839B65220646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift in Sources */,
+				F839B65620646CC9008E5613 /* AdminOptionInsertUsersViewController.swift in Sources */,
+				F82FD646206ADF8000F9753B /* GeneralOptionsCell.swift in Sources */,
+				F813AD572079168300B512B8 /* SearchUsersOptionCell.swift in Sources */,
+				F839B6482061B9AF008E5613 /* AdminOptionsCell.swift in Sources */,
+				F839B65020646B70008E5613 /* AdminOptionsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F839B62720607006008E5613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F839B63020607006008E5613 /* Swifty_ATMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F839B62D20607006008E5613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F839B61620607006008E5613 /* Swifty ATM */;
+			targetProxy = F839B62C20607006008E5613 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F839B61E20607006008E5613 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F839B61F20607006008E5613 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F839B62320607006008E5613 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F839B62420607006008E5613 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F839B63220607006008E5613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F839B63320607006008E5613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F839B63520607006008E5613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57C9811A847912474638ED5 /* Pods-Swifty ATM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQP86PXBQJ;
+				INFOPLIST_FILE = "Swifty ATM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barileva.Swifty-ATM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F839B63620607006008E5613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE9913E7B681B10F04E4638 /* Pods-Swifty ATM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQP86PXBQJ;
+				INFOPLIST_FILE = "Swifty ATM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barileva.Swifty-ATM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F839B63820607006008E5613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92F05B65F175618984041DC /* Pods-Swifty ATMTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQP86PXBQJ;
+				INFOPLIST_FILE = "Swifty ATMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barileva.Swifty-ATMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swifty ATM.app/Swifty ATM";
+			};
+			name = Debug;
+		};
+		F839B63920607006008E5613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76BF15710549AC4B2237707 /* Pods-Swifty ATMTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YQP86PXBQJ;
+				INFOPLIST_FILE = "Swifty ATMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barileva.Swifty-ATMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swifty ATM.app/Swifty ATM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F839B61220607006008E5613 /* Build configuration list for PBXProject "Swifty ATM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F839B63220607006008E5613 /* Debug */,
+				F839B63320607006008E5613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F839B63420607006008E5613 /* Build configuration list for PBXNativeTarget "Swifty ATM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F839B63520607006008E5613 /* Debug */,
+				F839B63620607006008E5613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F839B63720607006008E5613 /* Build configuration list for PBXNativeTarget "Swifty ATMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F839B63820607006008E5613 /* Debug */,
+				F839B63920607006008E5613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F839B60F20607006008E5613 /* Project object */;
+}
