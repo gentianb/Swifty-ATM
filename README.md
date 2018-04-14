@@ -1,2 +1,2 @@
 # Swifty-ATM
-Amateur Swift ATM
+Amateur Swift ATM.
