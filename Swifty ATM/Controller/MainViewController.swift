@@ -17,10 +17,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedOutsideOfTxtFields()
         navigationItem.title = "SWIFTY ATM"
         // Do any additional setup after loading the view, typically from a nib.
         }
-    
+
+
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.34, green:0.32, blue:1.00, alpha:1.0)
         hiddenTapsForAdminLogIn = 0
@@ -73,53 +75,8 @@ class MainViewController: UIViewController {
         self.passwordTxtField.layer.borderColor = UIColor.red.cgColor
         self.userIdTxtField.shake(20, withDelta: 5, speed: 0.02)
         self.passwordTxtField.shake(20, withDelta: 5, speed: 0.02)
+    }
 
-    }
-    func test(){
-        
-    }
-//    @IBAction func alertTest(_ sender: Any) {
-////        let alert = UIAlertController(title: "Attention", message: "Are you sure you want to withdraw more than you have available?", preferredStyle: .alert)
-////        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-////            print("Yes Pressed")
-////        }))
-////        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (_) in
-////            print("No Pressed")
-////        }))
-////
-////
-////        self.present(alert, animated: true)
-//
-//        let alertController = UIAlertController(title: "Email?", message: "Please input your email:", preferredStyle: .alert)
-//
-//        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
-//            if let field = alertController.textFields![0] as? UITextField {
-//                if let number = Int(field.text!){
-//                    print("its a number! \(number)")
-//                }
-//                else{
-//                    print("its not a number!")
-//                }
-//                // store and use entered data
-//
-//            } else {
-//
-//                print("please enter email id")
-//            }
-//        }
-//
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
-//
-//        alertController.addTextField { (textField) in
-//            textField.placeholder = "Email"
-//        }
-//
-//        alertController.addAction(confirmAction)
-//        alertController.addAction(cancelAction)
-//
-//        self.present(alertController, animated: true, completion: nil)
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -128,6 +85,15 @@ class MainViewController: UIViewController {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
         
     }
-
 }
-
+extension UIViewController {
+    func hideKeyboardWhenTappedOutsideOfTxtFields() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

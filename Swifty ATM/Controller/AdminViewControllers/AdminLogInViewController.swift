@@ -29,6 +29,7 @@ class AdminLogInViewController: UIViewController {
         navigationItem.title = "ADMIN LOG IN"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         self.setNeedsStatusBarAppearanceUpdate()
+        self.hideKeyboardWhenTappedOutsideOfTxtFields()
     }
     
     //used this way for standard users login but don't know how to retain the user id without iterating again through the array of users, so it's pointless, but here it works ok since every admin is the same permision wise
