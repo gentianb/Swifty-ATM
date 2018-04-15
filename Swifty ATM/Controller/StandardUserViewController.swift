@@ -11,13 +11,19 @@ import UIKit
 class StandardUserViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var logTxtView: UITextView!
     let currentUser = DataSource.instance.userArrayCopy[DataSource.instance.standardUserLoggedInIndex]
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.logTxtView.layoutManager.allowsNonContiguousLayout = false
 
         // Do any additional setup after loading the view.
         welcomeLabel.text = "Welcome \(currentUser.userName)  \(currentUser.userSurname)"
+        self.hideKeyboardWhenTappedOutsideOfTxtFields()
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,6 +36,7 @@ class StandardUserViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
         }))
         self.present(alert, animated: true)
+        addTextToLog(text: "\(currentUser.userName)'s Balance is: \(currentUser.userBalance).")
     }
     
     @IBAction func withdrawButton(_ sender: Any) {
@@ -48,7 +55,7 @@ class StandardUserViewController: UIViewController {
                             let alert3 = UIAlertController(title: "Current Balance", message: "Current Balance is: \(self.currentUser.userBalance)", preferredStyle: .alert)
                             DataSource.instance.updateStandardUserAt(location: DataSource.instance.standardUserLoggedInIndex)
                             alert3.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-                                
+                                self.addTextToLog(text: "Requested withdraw of \(number), current balance \(self.currentUser.userBalance).")
                                 print("We proceeded, and have negative balance")
                                 
                             }))
@@ -56,6 +63,7 @@ class StandardUserViewController: UIViewController {
                         }))
                         alert2.addAction(UIAlertAction(title: "No", style: .default, handler: { (_) in
                             print("We dont want to proceed!")
+                            self.addTextToLog(text: "Action canceled.")
                         }))
                         self.present(alert2, animated: true)
 
@@ -65,12 +73,17 @@ class StandardUserViewController: UIViewController {
                         let alert2 = UIAlertController(title: "Current Balance", message: "Current Balance is: \(self.currentUser.userBalance)", preferredStyle: .alert)
                         alert2.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
                             print("We have positive balance")
+                            self.addTextToLog(text: "Requested withdraw of \(number), current balance \(self.currentUser.userBalance).")
+
                         }))
                         self.present(alert2, animated: true)
 
-                }}
+                    }}else{
+                    self.addTextToLog(text: "Invalid input.")
+                }
             } else {
                 print("abort xd")
+                self.addTextToLog(text: "Invalid input.")
             }
         }
         
@@ -96,15 +109,17 @@ class StandardUserViewController: UIViewController {
                 if let number = Int(field.text!){
                     self.currentUser.userBalance += number
                     DataSource.instance.updateStandardUserAt(location: DataSource.instance.standardUserLoggedInIndex)
+                    self.addTextToLog(text: "Requested deposit of \(number), current balance \(self.currentUser.userBalance).")
+
                 }
                 else{
                     print("its not a number!")
+                    self.addTextToLog(text: "Invalid input.")
+
                 }
-                // store and use entered data
-                
             } else {
                 
-                print("its not a number")
+                self.addTextToLog(text: "Invalid input.")
             }
         }
         
@@ -118,8 +133,15 @@ class StandardUserViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
-        
     }
+    func addTextToLog(text txt: String)
+    {
+        logTxtView.text = logTxtView.text! + "\n\(txt)"
+        let stringLength: Int = logTxtView.text.count
+        self.logTxtView.scrollRangeToVisible(NSMakeRange(stringLength-1, 0))
+
+    }
+
     /*
     // MARK: - Navigation
 

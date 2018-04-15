@@ -100,13 +100,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zr-w6-i5d">
-                                <rect key="frame" x="166" y="160.5" width="42" height="21"/>
+                                <rect key="frame" x="166" y="161" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r3-TG-bfW">
-                                <rect key="frame" x="136.5" y="278" width="102" height="36"/>
+                                <rect key="frame" x="137" y="278" width="102" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="View Balance"/>
                                 <connections>
@@ -129,6 +129,20 @@
                                     <action selector="depositButton:" destination="1yj-dc-JXu" eventType="touchUpInside" id="dRG-Dw-klc"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKg-pd-41m">
+                                <rect key="frame" x="68" y="440" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Log:">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -145,12 +159,13 @@
                         <viewLayoutGuide key="safeArea" id="uOw-eG-tRa"/>
                     </view>
                     <connections>
+                        <outlet property="logTxtView" destination="nKg-pd-41m" id="u0k-jP-rbW"/>
                         <outlet property="welcomeLabel" destination="1zr-w6-i5d" id="qzW-d8-6vA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEg-ew-k0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="-235"/>
+            <point key="canvasLocation" x="1520.8" y="-235.23238380809596"/>
         </scene>
         <!--Admin Log In View Controller-->
         <scene sceneID="roe-LH-4RR">
