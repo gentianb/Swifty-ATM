@@ -14,7 +14,6 @@ class AdminOptionSearchUsersViewController: UIViewController, UISearchBarDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let userArrayCopy = DataSource.instance.userArrayCopy
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,14 @@ class AdminOptionSearchUsersViewController: UIViewController, UISearchBarDelegat
         tableView.dataSource = self
         tableView.delegate = self
         
-        DataSource.instance.searchWith(searchString: searchBar.text!, andCase: searchBar.selectedScopeButtonIndex)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DataSource.instance.refreshData()
+        DataSource.instance.searchWith(searchString: searchBar.text!, andCase: searchBar.selectedScopeButtonIndex)
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,7 +53,7 @@ extension AdminOptionSearchUsersViewController: UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? SearchUsersOptionCell{
-            cell.updateInfo(info: "\(userArrayCopy[indexPath.row].userAccountNumber) \(userArrayCopy[indexPath.row].userAccountPIN) \(userArrayCopy[indexPath.row].userBalance) \(userArrayCopy[indexPath.row].userName) \(userArrayCopy[indexPath.row].userSurname)")
+            cell.updateInfo(info: "\(DataSource.instance.userArrayCopy[indexPath.row].userAccountNumber) \(DataSource.instance.userArrayCopy[indexPath.row].userAccountPIN) \(DataSource.instance.userArrayCopy[indexPath.row].userBalance) \(DataSource.instance.userArrayCopy[indexPath.row].userName) \(DataSource.instance.userArrayCopy[indexPath.row].userSurname)")
             return cell
         }
         return SearchUsersOptionCell()

@@ -88,6 +88,7 @@ class DataSource{
     
     func refreshData(){
         userArrayCopy = userArray
+        print("data refreshed!")
     }
     
     func addStandardUser(userName: String, userSurname: String, userAccNumber: String, userAccPIN: String, userBalance: String){

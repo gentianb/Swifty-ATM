@@ -33,8 +33,6 @@ class AddUsersTextField: UITextField {
         layer.cornerRadius = 10.0
         layer.masksToBounds = true
     }
-    class func changeToRed(){
-        
-    }
+
 }
 

@@ -19,6 +19,11 @@ class AdminOptionsViewController: UIViewController {
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         print("a hin qdoher? ---------")
+                navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+    }
+    @objc func logOut(){
+        print("log out")
+        performSegue(withIdentifier: "goBackToMain", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,8 +14,6 @@ class AdminOptionInsertUsersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    let userArrayCopy = DataSource.instance.userArrayCopy
-    let adminArrayCopy = DataSource.instance.adminArrayCopy
 
     
     override func viewDidLoad() {
@@ -73,9 +71,9 @@ extension AdminOptionInsertUsersViewController: UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            return userArrayCopy.count
+            return DataSource.instance.userArrayCopy.count
         case 1:
-            return adminArrayCopy.count
+            return DataSource.instance.adminArrayCopy.count
         default:
             return 0
         }
@@ -86,12 +84,12 @@ extension AdminOptionInsertUsersViewController: UITableViewDataSource, UITableVi
         case 0:
             createButton.setTitle("Create Standard User", for: .normal)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? InsertUsersCell{
-                cell.updateInfo(info: "\(userArrayCopy[indexPath.row].userAccountNumber) \(userArrayCopy[indexPath.row].userAccountPIN) \(userArrayCopy[indexPath.row].userBalance) \(userArrayCopy[indexPath.row].userName) \(userArrayCopy[indexPath.row].userSurname)")
+                cell.updateInfo(info: "\(DataSource.instance.userArrayCopy[indexPath.row].userAccountNumber) \(DataSource.instance.userArrayCopy[indexPath.row].userAccountPIN) \(DataSource.instance.userArrayCopy[indexPath.row].userBalance) \(DataSource.instance.userArrayCopy[indexPath.row].userName) \(DataSource.instance.userArrayCopy[indexPath.row].userSurname)")
                 return cell}
         case 1:
             createButton.setTitle("Create Admin User", for: .normal)
             if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? InsertUsersCell{
-                cell.updateInfo(info: "\(adminArrayCopy[indexPath.row].userName) \(adminArrayCopy[indexPath.row].userPassword)")
+                cell.updateInfo(info: "\(DataSource.instance.adminArrayCopy[indexPath.row].userName) \(DataSource.instance.adminArrayCopy[indexPath.row].userPassword)")
                 return cell}
         default:
             break

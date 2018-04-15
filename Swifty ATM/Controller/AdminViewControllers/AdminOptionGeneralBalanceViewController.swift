@@ -24,7 +24,6 @@ class AdminOptionGeneralBalanceViewController: UIViewController {
     }
     
     @IBOutlet weak var tableView: UITableView!
-    let userArrayCopy = DataSource.instance.userArrayCopy
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -50,7 +49,7 @@ extension AdminOptionGeneralBalanceViewController: UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? GeneralOptionsCell{
-            cell.updateInfo(info: "\(userArrayCopy[indexPath.row].userAccountNumber) \(userArrayCopy[indexPath.row].userAccountPIN) \(userArrayCopy[indexPath.row].userBalance) \(userArrayCopy[indexPath.row].userName) \(userArrayCopy[indexPath.row].userSurname)")
+            cell.updateInfo(info: "\(DataSource.instance.userArrayCopy[indexPath.row].userAccountNumber) \(DataSource.instance.userArrayCopy[indexPath.row].userAccountPIN) \(DataSource.instance.userArrayCopy[indexPath.row].userBalance) \(DataSource.instance.userArrayCopy[indexPath.row].userName) \(DataSource.instance.userArrayCopy[indexPath.row].userSurname)")
             return cell
         }
         return GeneralOptionsCell()

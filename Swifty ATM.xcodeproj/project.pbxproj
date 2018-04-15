@@ -34,6 +34,7 @@
 		F839B65220646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65120646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift */; };
 		F839B65420646CB4008E5613 /* AdminOptionSearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65320646CB4008E5613 /* AdminOptionSearchUsersViewController.swift */; };
 		F839B65620646CC9008E5613 /* AdminOptionInsertUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839B65520646CC9008E5613 /* AdminOptionInsertUsersViewController.swift */; };
+		F8914BE22083C49E0003772E /* NumericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8914BE12083C49E0003772E /* NumericTextField.swift */; };
 		FDBABC9A31B0B045D9C10D17 /* Pods_Swifty_ATM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187C4F8CDF0D0309819FF91 /* Pods_Swifty_ATM.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		F839B65120646C97008E5613 /* AdminOptionGeneralBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionGeneralBalanceViewController.swift; sourceTree = "<group>"; };
 		F839B65320646CB4008E5613 /* AdminOptionSearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionSearchUsersViewController.swift; sourceTree = "<group>"; };
 		F839B65520646CC9008E5613 /* AdminOptionInsertUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOptionInsertUsersViewController.swift; sourceTree = "<group>"; };
+		F8914BE12083C49E0003772E /* NumericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				F82FD645206ADF8000F9753B /* GeneralOptionsCell.swift */,
 				F813AD5C207987C100B512B8 /* InsertUsersCell.swift */,
 				F813AD5E20798C1E00B512B8 /* AddUsersTextField.swift */,
+				F8914BE12083C49E0003772E /* NumericTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				F839B6462061B497008E5613 /* StandardUser.swift in Sources */,
 				F80B2202207D1C1100B64FC2 /* EditAdminUserPopUpViewController.swift in Sources */,
 				F839B65420646CB4008E5613 /* AdminOptionSearchUsersViewController.swift in Sources */,
+				F8914BE22083C49E0003772E /* NumericTextField.swift in Sources */,
 				F839B64C20646347008E5613 /* AdminOptions.swift in Sources */,
 				F839B64E206463BB008E5613 /* DataSource.swift in Sources */,
 				F839B61D20607006008E5613 /* MainViewController.swift in Sources */,
