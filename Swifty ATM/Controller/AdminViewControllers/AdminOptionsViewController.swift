@@ -19,7 +19,9 @@ class AdminOptionsViewController: UIViewController {
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         print("a hin qdoher? ---------")
-                navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(logOut))
+        DataSource.instance.startStandardUserFIRObserve()
+        //ndoshta kta duhet me e qit ne viewWillAppear
     }
     @objc func logOut(){
         print("log out")

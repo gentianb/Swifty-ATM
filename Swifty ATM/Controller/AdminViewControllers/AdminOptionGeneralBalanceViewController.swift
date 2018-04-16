@@ -20,7 +20,6 @@ class AdminOptionGeneralBalanceViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     
-        DataSource.instance.refreshData()
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +27,10 @@ class AdminOptionGeneralBalanceViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        DataSource.instance.refreshData()
     }
     
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {

@@ -13,7 +13,7 @@ class StandardUserViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     @IBOutlet weak var logTxtView: UITextView!
-    let currentUser = DataSource.instance.userArrayCopy[DataSource.instance.standardUserLoggedInIndex]
+    let currentUser = DataSource.instance.userArrayCopy[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,10 @@ class StandardUserViewController: UIViewController {
         // Do any additional setup after loading the view.
         welcomeLabel.text = "Welcome \(currentUser.userName)  \(currentUser.userSurname)"
         self.hideKeyboardWhenTappedOutsideOfTxtFields()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        welcomeLabel.text = "Welcome \(currentUser.userName)  \(currentUser.userSurname)"
     }
 
 
@@ -87,7 +91,10 @@ class StandardUserViewController: UIViewController {
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            self.addTextToLog(text: "Action canceled.")
+
+        }
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter Number"
@@ -123,7 +130,9 @@ class StandardUserViewController: UIViewController {
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            self.addTextToLog(text: "Action canceled.")
+        }
         
         alertController.addTextField { (textField) in
             textField.placeholder = "Enter Number"

@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        DataSource.instance.startStandardUserFIRObserve()
         
 //
 //        let ref = Database.database().reference().child("Admins")

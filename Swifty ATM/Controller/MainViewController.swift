@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.34, green:0.32, blue:1.00, alpha:1.0)
         hiddenTapsForAdminLogIn = 0
         print(DataSource.instance.adminOptions[0].optionTitle + " \(DataSource.instance.adminOptions[0].optionSubTitle)")
-        
+        DataSource.instance.removeStandardUserObserverAndClearLocalData()
 
     }
     private var hiddenTapsForAdminLogIn = 0
@@ -46,28 +46,44 @@ class MainViewController: UIViewController {
          print("Item \(index): \(element)")
          }
  */
-        var isSuccessfulLogIn = false
-        //for user in DataSource.instance.userArrayCopy
-        for (index, user) in DataSource.instance.userArrayCopy.enumerated(){
-            print(user.userAccountNumber + "   " + userIdTxtField.text!)
-            if user.userAccountNumber == userIdTxtField.text!{
-                if String(user.userAccountPIN) == passwordTxtField.text!{
-                    DataSource.instance.standardUserLoggedInIndex = index
-                    performSegue(withIdentifier: "goToStandardVC", sender: self)
-                    print("success")
-                    isSuccessfulLogIn = true
-                    break
-                }else{
-                    print(user.userAccountPIN + "   " + passwordTxtField.text!)
-                    print("fail pw")
-                }
-            }else{
-                print("fail uid")
+        
+        DataSource.instance.logInStandardUserWith(id: userIdTxtField.text!, password: passwordTxtField.text!) { logInState in
+            if logInState{
+                print("Log in successful!")
+                print(DataSource.instance.userArrayCopy.count)
+                self.performSegue(withIdentifier: "goToStandardVC", sender: self)
+
+            }
+            else{
+                print("failed login!")
+                self.shakeAndChangeColorOfFields()
             }
         }
-        if !isSuccessfulLogIn{
-            shakeAndChangeColorOfFields()
-        }
+        
+        
+        //print(DataSource.instance.logInStandardUserWith(id: userIdTxtField.text!, password: passwordTxtField.text!))
+//        var isSuccessfulLogIn = false
+//        //for user in DataSource.instance.userArrayCopy
+//        for (index, user) in DataSource.instance.userArrayCopy.enumerated(){
+//            print(user.userAccountNumber + "   " + userIdTxtField.text!)
+//            if user.userAccountNumber == userIdTxtField.text!{
+//                if String(user.userAccountPIN) == passwordTxtField.text!{
+//                    DataSource.instance.standardUserLoggedInIndex = index
+//                    performSegue(withIdentifier: "goToStandardVC", sender: self)
+//                    print("success")
+//                    isSuccessfulLogIn = true
+//                    break
+//                }else{
+//                    print(user.userAccountPIN + "   " + passwordTxtField.text!)
+//                    print("fail pw")
+//                }
+//            }else{
+//                print("fail uid")
+//            }
+//        }
+//        if !isSuccessfulLogIn{
+//            shakeAndChangeColorOfFields()
+//        }
     }
     
     func shakeAndChangeColorOfFields(){
